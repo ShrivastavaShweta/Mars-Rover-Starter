@@ -8,4 +8,9 @@ describe("Message class", function() {
     it("throws error if a name is NOT passed into the constructor as the first parameter", function(){
         expect(function() { new Message();}).toThrow(new Error('Name is required.'));
     });
+
+    it("constructor sets name", function(){
+        let testMessage = new Message('test name');
+        expect(testMessage.name).toEqual('test name');
+    })
 });
